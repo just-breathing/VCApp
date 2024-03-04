@@ -21,24 +21,18 @@ export const User = ({data,setData}) => {
             (data.user==null)?
             (
             <div className='UserForm' >
-            <div>
-                <label>Select Username : </label>
+            <div className='inpblock' >
+                <label> Username  </label>
                 <input type="text" ref={userRef}/>
             </div>
-            <div>
-                <label>Select Room : </label>
-                <input type="text" ref={roomRef} />
+            <div className='inpblock'>
+                <label> Room ID  </label>
+                <input type="text"  ref={roomRef} />
             </div>
-            <div>
-                <button onClick={handleClick}> Join</button>
-            </div>
+                <button className='joinbtn' onClick={handleClick}> Join</button>
             </div>
             )
-            :(
-            <div className='UserData' >
-            <div> User name : {data.user}</div>
-            </div>
-        )
+            :""
 
      );
 }
